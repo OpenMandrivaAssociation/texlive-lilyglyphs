@@ -6,7 +6,7 @@
 # catalog-version 9.2.2
 Name:		texlive-lilyglyphs
 Version:	9.2.2
-Release:	1
+Release:	1.1
 Summary:	Access lilypond fragments and glyphs, in LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/luatex/latex/lilyglyphs
@@ -18,7 +18,9 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Requires:	texlive-lilyglyphs.bin
+# FIXME temporary
+Provides:	texlive-lilyglyphs.bin
+#Requires:	texlive-lilyglyphs.bin
 
 %description
 The package provides the means to include arbitrary elements of
