@@ -6,7 +6,7 @@
 # catalog-version 9.2.2
 Name:		texlive-lilyglyphs
 Version:	9.2.2
-Release:	1.4
+Release:	1.5
 Summary:	Access lilypond fragments and glyphs, in LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/luatex/latex/lilyglyphs
