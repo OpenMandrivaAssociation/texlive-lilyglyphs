@@ -1,12 +1,12 @@
-# revision 31814
+# revision 33164
 # category Package
 # catalog-ctan /macros/luatex/latex/lilyglyphs
-# catalog-date 2013-10-02 17:17:58 +0200
+# catalog-date 2014-03-12 18:15:39 +0100
 # catalog-license lppl1.3
-# catalog-version 9.2.2
+# catalog-version 9.2.3
 Name:		texlive-lilyglyphs
-Version:	9.2.2
-Release:	1.5
+Version:	9.2.3
+Release:	1
 Summary:	Access lilypond fragments and glyphs, in LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/luatex/latex/lilyglyphs
@@ -18,9 +18,7 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-# FIXME temporary
-Provides:	texlive-lilyglyphs.bin
-#Requires:	texlive-lilyglyphs.bin
+Provides:	texlive-lilyglyphs.bin = %{EVRD}
 
 %description
 The package provides the means to include arbitrary elements of
@@ -38,6 +36,7 @@ as a result must be compiled with LuaLaTeX or XeLaTeX.
 
 #-----------------------------------------------------------------------
 %files
+%{_bindir}/lily-*
 %{_texmfdistdir}/fonts/opentype/public/lilyglyphs/FONTLOG
 %{_texmfdistdir}/fonts/opentype/public/lilyglyphs/LICENSE.OFL
 %{_texmfdistdir}/fonts/opentype/public/lilyglyphs/emmentaler-11.otf
@@ -81,6 +80,12 @@ as a result must be compiled with LuaLaTeX or XeLaTeX.
 %{_texmfdistdir}/tex/lualatex/lilyglyphs/pdfs/lily-crotchetDottedDown.pdf
 %{_texmfdistdir}/tex/lualatex/lilyglyphs/pdfs/lily-crotchetDown.pdf
 %{_texmfdistdir}/tex/lualatex/lilyglyphs/pdfs/lily-decrescHairpin.pdf
+%{_texmfdistdir}/tex/lualatex/lilyglyphs/pdfs/lily-demisemiquaver.pdf
+%{_texmfdistdir}/tex/lualatex/lilyglyphs/pdfs/lily-demisemiquaverDotted.pdf
+%{_texmfdistdir}/tex/lualatex/lilyglyphs/pdfs/lily-demisemiquaverDottedDouble.pdf
+%{_texmfdistdir}/tex/lualatex/lilyglyphs/pdfs/lily-demisemiquaverDottedDoubleDown.pdf
+%{_texmfdistdir}/tex/lualatex/lilyglyphs/pdfs/lily-demisemiquaverDottedDown.pdf
+%{_texmfdistdir}/tex/lualatex/lilyglyphs/pdfs/lily-demisemiquaverDown.pdf
 %{_texmfdistdir}/tex/lualatex/lilyglyphs/pdfs/lily-fancyExample.pdf
 %{_texmfdistdir}/tex/lualatex/lilyglyphs/pdfs/lily-halfNote.pdf
 %{_texmfdistdir}/tex/lualatex/lilyglyphs/pdfs/lily-halfNoteDotted.pdf
@@ -101,6 +106,10 @@ as a result must be compiled with LuaLaTeX or XeLaTeX.
 %{_texmfdistdir}/tex/lualatex/lilyglyphs/pdfs/lily-semiquaverDottedDoubleDown.pdf
 %{_texmfdistdir}/tex/lualatex/lilyglyphs/pdfs/lily-semiquaverDottedDown.pdf
 %{_texmfdistdir}/tex/lualatex/lilyglyphs/pdfs/lily-semiquaverDown.pdf
+%{_texmfdistdir}/tex/lualatex/lilyglyphs/pdfs/lily-threeBeamedQuavers.pdf
+%{_texmfdistdir}/tex/lualatex/lilyglyphs/pdfs/lily-threeBeamedQuaversI.pdf
+%{_texmfdistdir}/tex/lualatex/lilyglyphs/pdfs/lily-threeBeamedQuaversII.pdf
+%{_texmfdistdir}/tex/lualatex/lilyglyphs/pdfs/lily-threeBeamedQuaversIII.pdf
 %{_texmfdistdir}/tex/lualatex/lilyglyphs/pdfs/lily-twoBeamedQuavers.pdf
 %doc %{_texmfdistdir}/doc/lualatex/lilyglyphs/CHANGES.md
 %doc %{_texmfdistdir}/doc/lualatex/lilyglyphs/INSTALL
@@ -148,19 +157,20 @@ as a result must be compiled with LuaLaTeX or XeLaTeX.
 %doc %{_texmfdistdir}/doc/lualatex/lilyglyphs/documentation/resources/lilyglyphsManualFonts.sty
 %doc %{_texmfdistdir}/doc/lualatex/lilyglyphs/documentation/resources/lilyglyphsStyle.sty
 %doc %{_texmfdistdir}/doc/lualatex/lilyglyphs/documentation/resources/lilypond-manuals.css
-%doc %{_texmfdistdir}/doc/lualatex/lilyglyphs/documentation/the-feta-font-2-16-2.html
+%doc %{_texmfdistdir}/doc/lualatex/lilyglyphs/documentation/the-feta-font-2-18-0.html
 %doc %{_texmfdistdir}/doc/lualatex/lilyglyphs/license/COPYING.LPPL
 %doc %{_texmfdistdir}/doc/lualatex/lilyglyphs/license/MANIFEST
 %doc %{_texmfdistdir}/doc/lualatex/lilyglyphs/license/license-preamble.inp
 #- source
 %doc %{_texmfdistdir}/source/luatex/lilyglyphs/fonts/README-emmentaler
-%doc %{_texmfdistdir}/source/luatex/lilyglyphs/fonts/emmentaler-2-16-2.zip
+%doc %{_texmfdistdir}/source/luatex/lilyglyphs/fonts/emmentaler-2-18-0.zip
 %doc %{_texmfdistdir}/source/luatex/lilyglyphs/glyphimages/definitions/_template.ly
 %doc %{_texmfdistdir}/source/luatex/lilyglyphs/glyphimages/definitions/beamednotes.ly
 %doc %{_texmfdistdir}/source/luatex/lilyglyphs/glyphimages/definitions/dynamicsigns.ly
 %doc %{_texmfdistdir}/source/luatex/lilyglyphs/glyphimages/definitions/fancyexamples.ly
 %doc %{_texmfdistdir}/source/luatex/lilyglyphs/glyphimages/definitions/score.ily
 %doc %{_texmfdistdir}/source/luatex/lilyglyphs/glyphimages/definitions/singlenotes.ly
+%doc %{_texmfdistdir}/source/luatex/lilyglyphs/glyphimages/definitions/singlenotes.pdf
 %doc %{_texmfdistdir}/source/luatex/lilyglyphs/glyphimages/generated_src/lily-crescHairpin.ly
 %doc %{_texmfdistdir}/source/luatex/lilyglyphs/glyphimages/generated_src/lily-crotchet.ly
 %doc %{_texmfdistdir}/source/luatex/lilyglyphs/glyphimages/generated_src/lily-crotchetDotted.ly
@@ -169,6 +179,12 @@ as a result must be compiled with LuaLaTeX or XeLaTeX.
 %doc %{_texmfdistdir}/source/luatex/lilyglyphs/glyphimages/generated_src/lily-crotchetDottedDown.ly
 %doc %{_texmfdistdir}/source/luatex/lilyglyphs/glyphimages/generated_src/lily-crotchetDown.ly
 %doc %{_texmfdistdir}/source/luatex/lilyglyphs/glyphimages/generated_src/lily-decrescHairpin.ly
+%doc %{_texmfdistdir}/source/luatex/lilyglyphs/glyphimages/generated_src/lily-demisemiquaver.ly
+%doc %{_texmfdistdir}/source/luatex/lilyglyphs/glyphimages/generated_src/lily-demisemiquaverDotted.ly
+%doc %{_texmfdistdir}/source/luatex/lilyglyphs/glyphimages/generated_src/lily-demisemiquaverDottedDouble.ly
+%doc %{_texmfdistdir}/source/luatex/lilyglyphs/glyphimages/generated_src/lily-demisemiquaverDottedDoubleDown.ly
+%doc %{_texmfdistdir}/source/luatex/lilyglyphs/glyphimages/generated_src/lily-demisemiquaverDottedDown.ly
+%doc %{_texmfdistdir}/source/luatex/lilyglyphs/glyphimages/generated_src/lily-demisemiquaverDown.ly
 %doc %{_texmfdistdir}/source/luatex/lilyglyphs/glyphimages/generated_src/lily-fancyExample.ly
 %doc %{_texmfdistdir}/source/luatex/lilyglyphs/glyphimages/generated_src/lily-halfNote.ly
 %doc %{_texmfdistdir}/source/luatex/lilyglyphs/glyphimages/generated_src/lily-halfNoteDotted.ly
@@ -189,6 +205,10 @@ as a result must be compiled with LuaLaTeX or XeLaTeX.
 %doc %{_texmfdistdir}/source/luatex/lilyglyphs/glyphimages/generated_src/lily-semiquaverDottedDoubleDown.ly
 %doc %{_texmfdistdir}/source/luatex/lilyglyphs/glyphimages/generated_src/lily-semiquaverDottedDown.ly
 %doc %{_texmfdistdir}/source/luatex/lilyglyphs/glyphimages/generated_src/lily-semiquaverDown.ly
+%doc %{_texmfdistdir}/source/luatex/lilyglyphs/glyphimages/generated_src/lily-threeBeamedQuavers.ly
+%doc %{_texmfdistdir}/source/luatex/lilyglyphs/glyphimages/generated_src/lily-threeBeamedQuaversI.ly
+%doc %{_texmfdistdir}/source/luatex/lilyglyphs/glyphimages/generated_src/lily-threeBeamedQuaversII.ly
+%doc %{_texmfdistdir}/source/luatex/lilyglyphs/glyphimages/generated_src/lily-threeBeamedQuaversIII.ly
 %doc %{_texmfdistdir}/source/luatex/lilyglyphs/glyphimages/generated_src/lily-twoBeamedQuavers.ly
 
 #-----------------------------------------------------------------------
@@ -198,5 +218,11 @@ as a result must be compiled with LuaLaTeX or XeLaTeX.
 %build
 
 %install
+mkdir -p %{buildroot}%{_bindir}
+pushd %{buildroot}%{_bindir}
+    ln -sf %{_texmfdistdir}/scripts/lilyglyphs/lily-glyph-commands.py lily-glyph-commands
+    ln -sf %{_texmfdistdir}/scripts/lilyglyphs/lily-image-commands.py lily-image-commands
+    ln -sf %{_texmfdistdir}/scripts/lilyglyphs/lily-rebuild-pdfs.py lily-rebuild-pdfs
+popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
