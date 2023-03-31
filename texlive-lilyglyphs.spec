@@ -1,6 +1,6 @@
 Name:		texlive-lilyglyphs
 Version:	56473
-Release:	1
+Release:	2
 Summary:	Access lilypond fragments and glyphs, in LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/luatex/latex/lilyglyphs
