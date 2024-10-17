@@ -3,7 +3,7 @@ Version:	56473
 Release:	2
 Summary:	Access lilypond fragments and glyphs, in LaTeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/luatex/latex/lilyglyphs
+URL:		https://www.ctan.org/tex-archive/macros/luatex/latex/lilyglyphs
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lilyglyphs.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lilyglyphs.doc.r%{version}.tar.xz
