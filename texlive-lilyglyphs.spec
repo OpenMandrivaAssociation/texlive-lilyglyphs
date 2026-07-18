@@ -1,5 +1,6 @@
 %global tl_name lilyglyphs
 %global tl_revision 56473
+%global tl_bin_links lily-glyph-commands:%{_texmfdistdir}/scripts/lilyglyphs/lily-glyph-commands.py lily-image-commands:%{_texmfdistdir}/scripts/lilyglyphs/lily-image-commands.py lily-rebuild-pdfs:%{_texmfdistdir}/scripts/lilyglyphs/lily-rebuild-pdfs.py
 
 Name:		texlive-%{tl_name}
 Epoch:		1
@@ -16,6 +17,8 @@ BuildArch:	noarch
 BuildSystem:	texlive
 Requires:	texlive(lilyglyphs.bin)
 Provides:	texlive(%{tl_name}) = %{tl_revision}
+Provides:	texlive(%{tl_name}.bin) = %{tl_revision}
+Provides:	texlive-%{tl_name}.bin = %{EVRD}
 
 %description
 The package provides the means to include arbitrary elements of Lilypond
